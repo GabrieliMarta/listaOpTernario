@@ -10,11 +10,15 @@
     // Verifique se o usuário ganha mais do que recebe e apresente em tela, indicando quanto que sobrou após o pagamento das contas ou quanto que faltou para poder pagar todas as contas previstas.
 
     //Entrada
-
-
+    const agua = parseFloat(prompt(`Informe quanto paga na conta de água`).replace(",", "."));
+    const energia = parseFloat(prompt(`Informe quanto paga na conta de energia elétrica`).replace(",", "."));
+    const fone = parseFloat(prompt(`Informe quanto paga na conta de telefone`).replace(",", "."));
+    const mercado = parseFloat(prompt(`Informe quanto paga na conta de Supermercado`).replace(",", "."));
+    const salario = parseFloat(prompt(`Informe quanto ganha de salário`).replace(",", "."));
     //Processamento
-
-    
+    let mensagemFinal = ``;
+    (agua + energia + fone + mercado < salario) ? mensagemFinal = `Você ganha mais do que gasta, sobrando R$ ${( salario -(agua + energia + fone + mercado)).toFixed(2).replace(".",",")}.`
+    :mensagemFinal = `Você paga mais do que recebe, faltando R$ ${((agua + energia + fone + mercado)- salario).toFixed(2).replace(".",",")}.`;
     //Saída
-    
+    alert(mensagemFinal);
 </script>

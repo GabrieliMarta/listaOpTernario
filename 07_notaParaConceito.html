@@ -10,11 +10,15 @@
     // Entre 5.9 e zero            E
 
     //Entrada
-
-
+    const nota = parseFloat(prompt(`Informe sua nota`).replace(",", "."));
     //Processamento
-
-    
+    let mensagemFinal = "";
+    (nota >= 9 || nota >= 10) ? mensagemFinal = "Sua nota em conceito foi A "
+        : (nota >= 8.9 || nota >= 8) ? mensagemFinal = "Sua nota em conceito foi B"
+            : (nota >= 7.9 || nota >= 7) ? mensagemFinal = "Sua nota em conceito foi C"
+                : (nota >= 6.9 || nota >= 6) ? mensagemFinal = "Sua nota em conceito foi D"
+                    : mensagemFinal = "Sua nota em conceito foi E"
     //Saída
+    alert(mensagemFinal);
 
 </script>

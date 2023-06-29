@@ -8,11 +8,14 @@
     // Apresente o salário final recebido pelo funcionário semanalmente e o preço de cada hora trabalhada.
 
     //Entrada
-
-
+    let horasTrabalhadas = parseInt(prompt(`Informe a quantidade de horas trabalhas semanalmente`));
+    let recebeHoras = parseFloat(prompt(`Informe quanto recebe por hora trabalhada`).replace(",", "."));
     //Processamento
-
-    
+    let mensagemFinal = ``;
+    (horasTrabalhadas > 0 && horasTrabalhadas < 46) ? mensagemFinal = `seu salário final na semana será de R$ ${(horasTrabalhadas * recebeHoras).toFixed(2).replace(".",",")}`
+    :(horasTrabalhadas > 45 && horasTrabalhadas < 61) ? mensagemFinal = `seu salário final da semana será de R$ ${((horasTrabalhadas * recebeHoras)* 1.20).toFixed(2).replace(".",",")}`
+    : mensagemFinal = `seu salário final da semana será de R$ ${((horasTrabalhadas * recebeHoras)* 1.30).toFixed(2).replace(".",",")}`;
     //Saída
+    alert(mensagemFinal);
 
-</script>
+</script> 

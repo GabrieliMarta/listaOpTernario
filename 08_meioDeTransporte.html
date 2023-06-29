@@ -6,12 +6,17 @@
     // Verifique qual é o meio de transporte mais barato e apresente em tela, especificando quanto custará para ir e voltar do trabalho diariamente.
 
     //Entrada
-
-
+    const precoLitro = parseFloat(prompt(`Informe o preço do litro do combustível`).replace(",", "."));
+    const litros = parseFloat(prompt(`Informe a quantidade de litros que utilizará para se deslocar ao trabalho`).replace(",", "."));
+    const precoTransporte = parseFloat(prompt(`Informe o preço do transporte que utilizará para se deslocar ao trabalho diariamente`).replace(",", "."));
     //Processamento
-
-    
+    let mensagemFinal = ``;
+    precoLitro = (precoLitro * litros * 30 * 2);
+    precoTransporte = (precoTransporte * 2) * 30 ;
+    (litro > passagem) ? mensagemFinal = `O meio de transporte mais barato é o transporte público e o custo será de R$ ${(passagem).toFixed(2).replace(".",",")}`
+    : mensagemFinal = `O meio de transporte mais barato é o seu carro e o custo será ${(passagem).toFixed(2).replace(".",",")}`;
     //Saída
+    alert(mensagemFinal);
 
     
 </script>

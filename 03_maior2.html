@@ -8,10 +8,8 @@
     const num2 = parseInt(prompt(`Informe outro número inteiro`));
     //Processamento
     let mensagemFinal = "";
-    (num1 > num2) ? mensagemFinal = `O número ${num1} é maior que o número ${num2}`
-    : (num1 < num2) ? mensagemFinal = `O número ${num2} é maior que o número ${num1}`
-    : (num1 == num2) ? mensagemFinal = `Os números são iguais`
-    
+    (num1 > num2) ? mensagemFinal = "O primeiro número é maior que o segundo número"
+        : mensagemFinal = "O segundo número  é maior que o primeiro número";
     //Saída
-    
+    alert(mensagemFinal);
 </script>
